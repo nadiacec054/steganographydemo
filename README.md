@@ -25,3 +25,23 @@ Backend: Flask (Python)
 Encryption: AES (cryptography library)
 Image Processing: Pillow
 Storage: Temporary (in-memory / SQLite)
+
+flowchart TD
+    A[User 1 selects image + enters message]
+    B[AES Encryption Module]
+    C[LSB Steganography Engine]
+    D[OTP / Session Code Generator]
+    E[Receiver enters OTP]
+    F[Image Download / Transfer Module]
+    G[Message Extraction]
+    H[AES Decryption Module]
+    I[Secret Message Displayed]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
