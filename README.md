@@ -26,6 +26,9 @@ Encryption: AES (cryptography library)
 Image Processing: Pillow
 Storage: Temporary (in-memory / SQLite)
 
+
+
+FLOWCHART STRUCTURE ->
 ```mermaid
 flowchart TD
     A[User 1 selects image + enters message]
