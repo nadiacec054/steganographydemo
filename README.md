@@ -26,13 +26,14 @@ Encryption: AES (cryptography library)
 Image Processing: Pillow
 Storage: Temporary (in-memory / SQLite)
 
+```mermaid
 flowchart TD
     A[User 1 selects image + enters message]
     B[AES Encryption Module]
     C[LSB Steganography Engine]
     D[OTP / Session Code Generator]
     E[Receiver enters OTP]
-    F[Image Download / Transfer Module]
+    F[Image Transfer]
     G[Message Extraction]
     H[AES Decryption Module]
     I[Secret Message Displayed]
@@ -45,3 +46,4 @@ flowchart TD
     F --> G
     G --> H
     H --> I
+```
