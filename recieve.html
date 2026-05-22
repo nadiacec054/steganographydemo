@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receive Message</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Receive Message</h1>
+
+    <form action="/receive" method="POST">
+        <label>Enter OTP Code:</label>
+        <input type="text" name="code" required>
+
+        <button type="submit">Receive</button>
+    </form>
+
+    {% if message %}
+        <div class="result">
+            <h2>Received Message:</h2>
+            <p>{{ message }}</p>
+
+            <h2>Received Image:</h2>
+            <img src="/uploads/{{ filename }}" width="300">
+            <br>
+            <a href="/uploads/{{ filename }}" download>Download Image</a>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <a class="back" href="/">Back Home</a>
+</div>
+
+</body>
+</html>
